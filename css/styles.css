@@ -149,7 +149,67 @@ p {
 }
 
 /* Navbar */
+
 /* Hero */
+
+.hero {
+  min-height: 100vh;
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-banner {
+  padding: 0 3rem;
+}
+
+.hero-banner h1 {
+  text-transform: uppercase;
+}
+
+.hero-banner p {
+  color: inherit;
+  letter-spacing: var(--spacing);
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  padding: 0.9rem 1.6rem;
+  font-size: 1.25rem;
+  background-color: var(--clr-white);
+  color: var(--clr-primary-5);
+}
+
+.hero-btn:hover {
+  background: transparent;
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--clr-primary-1), rgba(0, 0, 0, 0.5)),
+      url('../images/main.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-banner {
+    padding: 0;
+  }
+
+  .hero-banner p {
+    max-width: 40rem;
+  }
+}
+
 /* About */
 /* section add to globals */
 /* title add to globals */
