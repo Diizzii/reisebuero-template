@@ -281,6 +281,68 @@ p {
 
 /* Services */
 
+.services {
+  text-align: center;
+  background-color: var(--clr-grey-10);
+}
+
+.services-center {
+  padding: 2rem;
+}
+
+.service {
+  margin-bottom: 3rem;
+}
+
+.service-icon {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.service-title {
+  line-height: 1.5rem;
+  margin-bottom: 0;
+}
+
+.service-text {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .services-center {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  .service-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    .service {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1.5rem;
+      flex: 0 0 calc(33.33% - 1rem);
+      text-align: left;
+    }
+    .service-icon {
+      margin-bottom: 0;
+    }
+  }
+}
+
 /* Featured Tours */
 
 /* Contact */
