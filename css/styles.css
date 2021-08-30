@@ -424,6 +424,8 @@ p {
 .contact {
   background-color: var(--clr-primary-5);
   text-align: center;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .contact-title {
@@ -482,5 +484,51 @@ p {
 }
 
 /* Gallery */
+
+.gallery-img-container {
+  position: relative;
+  margin: 0;
+}
+
+.gallery-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 2rem;
+  color: var(--clr-white);
+  z-index: 1;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  opacity: 0%;
+}
+
+.gallery-img-container:hover .gallery-icon {
+  opacity: 100%;
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 576px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .gallery-center {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .gallery-center {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery-center {
+    width: 25%;
+  }
+}
 
 /* Footer */
