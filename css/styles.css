@@ -59,6 +59,9 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
@@ -248,7 +251,7 @@ li {
   .fas.fa-bars {
     display: none;
   }
-  .header-links {
+  .nav-links {
     display: flex;
     justify-content: space-between;
     align-items: bottom;
