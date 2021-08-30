@@ -397,6 +397,7 @@ p {
 
 .tour-btn {
   text-align: center;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -419,6 +420,66 @@ p {
 }
 
 /* Contact */
+
+.contact {
+  background-color: var(--clr-primary-5);
+  text-align: center;
+}
+
+.contact-title {
+  color: var(--clr-white);
+}
+
+.contact-title h3 {
+  letter-spacing: var(--spacing);
+}
+
+.contact-title p {
+  color: var(--clr-primary-9);
+}
+
+.contact-form input,
+.contact-form button {
+  font-family: inherit;
+  height: 2.2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0 0.4rem 0 0;
+}
+
+.contact-form button {
+  background-color: var(--clr-primary-8);
+  border: none;
+  letter-spacing: var(--spacing);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1170px) {
+  .contact {
+    padding-bottom: 3rem;
+  }
+
+  .contact-center {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-form {
+    position: relative;
+    top: 0.7rem;
+    width: 50%;
+    text-align: right;
+    display: flex;
+    align-self: top;
+    justify-content: space-between;
+    align-items: top;
+    gap: 1rem;
+  }
+
+  .contact-form input {
+    flex-grow: 2;
+  }
+}
 
 /* Gallery */
 
