@@ -388,7 +388,7 @@ li {
 
 .services {
   text-align: center;
-  background-color: var(--clr-grey-10);
+  background-color: var(--clr-grey-9);
 }
 
 .services-center {
@@ -401,7 +401,7 @@ li {
 }
 
 .service:hover {
-  background-color: var(--clr-grey-9);
+  background-color: var(--clr-white);
   transform: scale(1.05);
   transition: var(--transition);
 }
