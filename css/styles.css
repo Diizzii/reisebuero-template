@@ -567,7 +567,14 @@ li {
   background-color: var(--clr-primary-8);
   border: none;
   letter-spacing: var(--spacing);
-  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-submit:hover {
+  background-color: var(--clr-white);
+  transform: scale(1.05);
+  color: var(--clr-primary-5);
+  transition: var(--transition);
 }
 
 @media screen and (min-width: 1170px) {
