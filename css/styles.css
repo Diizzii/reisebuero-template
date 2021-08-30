@@ -397,6 +397,13 @@ li {
 
 .service {
   margin-bottom: 3rem;
+  padding: 0.5rem;
+}
+
+.service:hover {
+  background-color: var(--clr-grey-9);
+  transform: scale(1.05);
+  transition: var(--transition);
 }
 
 .service-icon {
