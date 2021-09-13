@@ -518,6 +518,18 @@ li {
   margin-bottom: 0.3rem;
 }
 
+.tour-img-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-primary-5);
+  opacity: 0.3;
+  z-index: 3;
+}
+
 .tour-img {
   height: 15rem;
   object-fit: cover;
@@ -656,6 +668,18 @@ li {
   position: relative;
   margin: 0;
   background-color: var(--clr-primary-5);
+}
+
+.gallery-img-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-primary-5);
+  opacity: 0.3;
+  z-index: 3;
 }
 
 .gallery-icon {
