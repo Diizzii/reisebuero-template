@@ -13,18 +13,16 @@ Variables
 
 :root {
   /* primary colors dark*/
-  --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-2: hsl(185, 84%, 25%);
-  --clr-primary-3: hsl(185, 81%, 29%);
-  --clr-primary-4: hsl(184, 77%, 34%);
+  --clr-primary-1: #001233;
+  --clr-primary-2: #001845;
+  --clr-primary-3: #002855;
+  --clr-primary-4: #023e7d;
   /* primary color */
-  --clr-primary-5: hsl(185, 62%, 45%);
+  --clr-primary-5: #0353a4;
   /* primary colors light */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
-  --clr-primary-9: hsl(185, 94%, 87%);
-  --clr-primary-10: hsl(186, 100%, 94%);
+
+  --clr-primary-9: #0466c8;
+  --clr-primary-10: #bbdefb;
   /* dark grey for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -65,7 +63,7 @@ html {
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-5);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -103,7 +101,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-2);
 }
 ul,
 li {
@@ -156,12 +154,18 @@ li {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .section-title {
+    margin-bottom: 3rem;
+  }
 }
 
 .section-title h2 {
@@ -178,12 +182,6 @@ li {
   max-width: 1170px;
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
-
 /* Navbar */
 
 .navbar {
@@ -192,8 +190,9 @@ li {
   top: 0;
   background-color: var(--clr-white);
   letter-spacing: var(--spacing);
-  padding: 0.5rem 0.5rem 0 0;
-  z-index: 2;
+  padding: 0.5rem 1rem 0 1rem;
+  z-index: 99;
+  box-shadow: var(--dark-shadow);
 }
 
 .top {
@@ -206,12 +205,12 @@ li {
 
 .top p,
 .nav-links a {
-  color: #000;
+  color: var(--clr-grey-);
 }
 
 .header-link {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 100vw;
   margin: 0;
   padding: 0.5rem;
@@ -219,10 +218,13 @@ li {
 
 .nav-links {
   display: none;
+  text-transform: uppercase;
 }
 
 .header-link:hover {
   background-color: var(--clr-primary-9);
+  color: var(--clr-white);
+  transition: var(--transition);
 }
 
 .top span,
@@ -235,6 +237,10 @@ li {
   top: 3px;
 }
 
+.hamburger-icon {
+  font-size: 1.5rem;
+}
+
 .header-icons {
   display: none;
 }
@@ -243,7 +249,7 @@ li {
   display: initial;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -261,7 +267,6 @@ li {
   .header-link {
     width: auto;
     letter-spacing: initial;
-    font-size: 1rem;
   }
   .header-link:hover {
     background-color: transparent;
@@ -296,6 +301,10 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: linear-gradient(
+    var(--clr-primary-3),
+    rgba(4, 102, 200, 0.2)
+  );
 }
 
 .hero-banner {
@@ -316,9 +325,11 @@ li {
 
 .hero-btn {
   padding: 0.9rem 1.6rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-color: var(--clr-white);
   color: var(--clr-primary-5);
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
 
 .hero-btn:hover {
@@ -327,10 +338,22 @@ li {
   border-color: var(--clr-white);
 }
 
+@media screen and (max-width: 499px) {
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+  .hero-btn {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(var(--clr-primary-1), rgba(0, 0, 0, 0.5)),
-      url('../images/main.jpeg');
+    background-image: linear-gradient(
+        var(--clr-primary-1),
+        rgba(4, 102, 200, 0.2)
+      ),
+      url('../images/main.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -348,9 +371,29 @@ li {
 
 /* About */
 
-.about-img,
-.about-info {
+.about-img {
+  position: relative;
   margin-bottom: 2rem;
+}
+
+.about-info {
+  text-align: center;
+}
+
+.about-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-primary-5);
+  opacity: 0.3;
+  z-index: 3;
+}
+
+.about-btn {
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -379,7 +422,6 @@ li {
       z-index: -1;
     }
     .about-img {
-      position: relative;
       bottom: -0.8rem;
     }
   }
