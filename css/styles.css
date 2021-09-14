@@ -755,6 +755,11 @@ li {
   margin: 0.5rem 0;
 }
 
+.italic {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
 .footer-icon {
   margin: 0 0.5rem 2rem;
 }
