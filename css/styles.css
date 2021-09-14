@@ -63,7 +63,7 @@ html {
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-2);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -164,7 +164,7 @@ li {
 
 @media screen and (min-width: 992px) {
   .section-title {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -301,10 +301,7 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(
-    var(--clr-primary-3),
-    rgba(4, 102, 200, 0.2)
-  );
+  background-image: linear-gradient(var(--clr-primary-2), var(--clr-primary-9));
 }
 
 .hero-banner {
@@ -407,7 +404,7 @@ li {
   .about-img,
   .about-info {
     flex: 0 0 calc(50% - 2rem);
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 
   @media screen and (min-width: 1170px) {
@@ -434,18 +431,14 @@ li {
   background-color: var(--clr-grey-9);
 }
 
-.services-center {
-  padding: 2rem;
-}
-
 .service {
-  margin-bottom: 3rem;
-  padding: 1rem;
-  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0.5rem;
+  background-color: var(--clr-white);
+  box-shadow: var(--dark-shadow);
 }
 
 .service:hover {
-  background-color: var(--clr-white);
   transform: scale(1.05);
   transition: var(--transition);
 }
@@ -456,45 +449,34 @@ li {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   background-color: var(--clr-primary-5);
-  color: var(--clr-primary-1);
+  color: var(--clr-white);
 }
 
 .service-title {
   line-height: 1.5rem;
-  margin-bottom: 0;
-}
-
-.service-text {
-  max-width: 20rem;
-  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .services-center {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    place-items: center;
     margin-bottom: 1rem;
   }
+
   .service {
-    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 0;
   }
+
   .service-icon {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
   @media screen and (min-width: 992px) {
-    .service {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 1.5rem;
-      flex: 0 0 calc(33.33% - 1rem);
-      text-align: left;
-    }
-    .service-icon {
-      margin-bottom: 0;
+    .services-center {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
