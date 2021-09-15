@@ -188,15 +188,15 @@ li {
   position: fixed;
   width: 100vw;
   top: 0;
-  background-color: var(--clr-white);
+  background-color: var(--clr-grey-10);
   letter-spacing: var(--spacing);
-  padding: 0.5rem 1rem 0 1rem;
+  padding-top: 0.5rem;
   z-index: 99;
   box-shadow: var(--dark-shadow);
 }
 
 .top {
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem 1.5rem 0 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   display: flex;
@@ -208,22 +208,24 @@ li {
   color: var(--clr-grey-);
 }
 
-.header-link {
-  display: inline-block;
-  font-size: 1.2rem;
-  width: 100vw;
-  margin: 0;
-  padding: 0.5rem;
-}
-
 .nav-links {
   display: none;
   text-transform: uppercase;
 }
 
+.header-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 100vw;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  box-shadow: var(--light-shadow);
+}
+
 .header-link:hover {
-  background-color: var(--clr-primary-9);
-  color: var(--clr-white);
+  transform: scale(1.02);
+  color: var(--clr-primary-5);
+  font-weight: bold;
   transition: var(--transition);
 }
 
@@ -253,6 +255,12 @@ li {
   .navbar {
     display: flex;
     justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .top {
+    padding-left: 0;
   }
 
   .fas.fa-bars {
@@ -267,11 +275,10 @@ li {
   .header-link {
     width: auto;
     letter-spacing: initial;
+    box-shadow: none;
   }
   .header-link:hover {
-    background-color: initial;
-    color: var(--clr-primary-5);
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: var(--transition);
   }
   .header-icons {
@@ -631,7 +638,7 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-  .btn-submit {
+  .contact-form button {
     margin-top: 0.5rem;
   }
 }
@@ -728,7 +735,7 @@ li {
 /* Footer */
 
 .footer {
-  background-color: var(--clr-grey-2);
+  background-color: var(--clr-grey-3);
   color: var(--clr-white);
   padding: 1rem;
   margin: 0;
@@ -755,6 +762,10 @@ li {
   margin: 0.5rem 0;
 }
 
+#dk-link {
+  color: var(--clr-primary-10);
+}
+
 .italic {
   font-size: 0.8rem;
   font-style: italic;
@@ -776,5 +787,11 @@ li {
 @media screen and (min-width: 500px) {
   .footer-links {
     gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-links {
+    display: none;
   }
 }
